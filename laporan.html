@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin TK AT Taqwa - Laporan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TK Islam AT Taqwa Jakarta</h1>
+            <p>Administrasi - Laporan Pendaftaran</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="admin.html">Data Pendaftaran</a></li>
+                <li><a href="admin-reports.html" class="active">Laporan</a></li>
+                <li><a href="admin-activities.html">Kelola Kegiatan</a></li>
+                <li><a href="admin-messages.html">Pesan</a></li>
+                <li><a href="index.html">Kembali ke Beranda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="admin-section">
+            <div class="admin-header">
+                <h2>Laporan Pendaftaran Siswa Baru</h2>
+                <div class="admin-actions">
+                    <button class="btn" id="printReport">Cetak Laporan</button>
+                    <button class="btn" id="exportExcel">Export ke Excel</button>
+                    <button class="btn" id="generateSummary">Buat Ringkasan</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Filter Laporan</h3>
+                <form id="reportFilter">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reportPeriod">Periode</label>
+                            <select id="reportPeriod" name="reportPeriod">
+                                <option value="all">Semua Periode</option>
+                                <option value="2024-2025">Tahun Ajaran 2024/2025</option>
+                                <option value="2023-2024">Tahun Ajaran 2023/2024</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="customDateGroup" style="display:none;">
+                            <label for="customDate">Tanggal</label>
+                            <div class="date-range">
+                                <input type="date" id="startDate" name="startDate">
+                                <span>s/d</span>
+                                <input type="date" id="endDate" name="endDate">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reportStatus">Status</label>
+                            <select id="reportStatus" name="reportStatus">
+                                <option value="all">Semua Status</option>
+                                <option value="approved">Diterima</option>
+                                <option value="rejected">Ditolak</option>
+                                <option value="pending">Menunggu</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reportClass">Kelas</label>
+                            <select id="reportClass" name="reportClass">
+                                <option value="all">Semua Kelas</option>
+                                <option value="A">Kelompok A</option>
+                                <option value="B">Kelompok B</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Terapkan Filter</button>
+                    <button type="reset" class="btn btn-secondary">Reset Filter</button>
+                </form>
+            </div>
+
+            <div class="report-summary">
+                <h3>Ringkasan Pendaftaran</h3>
+                <div class="summary-cards">
+                    <div class="summary-card total">
+                        <h4>Total Pendaftar</h4>
+                        <p class="summary-value">142</p>
+                        <p class="summary-change"><span class="increase">+12%</span> dari periode lalu</p>
+                    </div>
+                    <div class="summary-card approved">
+                        <h4>Diterima</h4>
+                        <p class="summary-value">85</p>
+                        <p class="summary-percentage">60%</p>
+                    </div>
+                    <div class="summary-card rejected">
+                        <h4>Ditolak</h4>
+                        <p class="summary-value">32</p>
+                        <p class="summary-percentage">23%</p>
+                    </div>
+                    <div class="summary-card pending">
+                        <h4>Menunggu</h4>
+                        <p class="summary-value">25</p>
+                        <p class="summary-percentage">17%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="report-data">
+                <div class="report-actions">
+                    <div class="report-show">
+                        <label for="showEntries">Tampilkan</label>
+                        <select id="showEntries" name="showEntries">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <span>entri</span>
+                    </div>
+                    <div class="report-search">
+                        <label for="searchReport">Cari:</label>
+                        <input type="text" id="searchReport" name="searchReport">
+                    </div>
+                </div>
+
+                <table id="reportTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>No. Pendaftaran</th>
+                            <th>Nama Siswa</th>
+                            <th>Tanggal Daftar</th>
+                            <th>Kelas</th>
+                            <th>Status</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>TAQ-2024-0123</td>
+                            <td>Ahmad Fauzi</td>
+                            <td>05/05/2024</td>
+                            <td>Kelompok A</td>
+                            <td><span class="status-approved">Diterima</span></td>
+                            <td><button class="btn-small view-btn">Lihat</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>TAQ-2024-0124</td>
+                            <td>Siti Aminah</td>
+                            <td>06/05/2024</td>
+                            <td>Kelompok B</td>
+                            <td><span class="status-approved">Diterima</span></td>
+                            <td><button class="btn-small view-btn">Lihat</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>TAQ-2024-0125</td>
+                            <td>Muhammad Ali</td>
+                            <td>07/05/2024</td>
+                            <td>Kelompok A</td>
+                            <td><span class="status-rejected">Ditolak</span></td>
+                            <td><button class="btn-small view-btn">Lihat</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>TAQ-2024-0126</td>
+                            <td>Fatimah Zahra</td>
+                            <td>08/05/2024</td>
+                            <td>Kelompok B</td>
+                            <td><span class="status-pending">Menunggu</span></td>
+                            <td><button class="btn-small view-btn">Lihat</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <div class="pagination-info">
+                        Menampilkan 1 sampai 4 dari 4 entri
+                    </div>
+                    <div class="pagination-controls">
+                        <button class="btn-small" disabled>Sebelumnya</button>
+                        <button class="btn-small active">1</button>
+                        <button class="btn-small">2</button>
+                        <button class="btn-small">3</button>
+                        <button class="btn-small">Selanjutnya</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="report-charts">
+                <h3>Statistik Pendaftaran</h3>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <h4>Pendaftar per Bulan</h4>
+                        <div class="chart-placeholder" id="monthlyChart"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h4>Status Pendaftaran</h4>
+                        <div class="chart-placeholder" id="statusChart"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h4>Distribusi Kelas</h4>
+                        <div class="chart-placeholder" id="classChart"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TK Islam AT Taqwa Jakarta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

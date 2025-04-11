@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK AISYIYAH 6 TASIKMALAYA - Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TK AISYIYAH 6 TASIKMALAYA</h1>
+            <p>Administrasi Pendaftaran Siswa Baru</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="admin.html" class="active">Data Pendaftaran</a></li>
+                <li><a href="#laporan">Laporan</a></li>
+                <li><a href="#kegiatan">Kelola Kegiatan</a></li>
+                <li><a href="#pesan">Pesan</a></li>
+                <li><a href="index.html">Kembali ke Beranda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="admin-dashboard">
+            <h2>Data Pendaftaran Siswa Baru</h2>
+            
+            <div class="admin-actions">
+                <button class="btn" id="printReport">Cetak Laporan</button>
+                <button class="btn" id="exportData">Export Data</button>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari nama siswa...">
+                <button class="btn">Cari</button>
+            </div>
+            
+            <table id="registrationTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Siswa</th>
+                        <th>Tanggal Daftar</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ahmad Fauzi</td>
+                        <td>15/04/2024</td>
+                        <td><span class="status-pending">Menunggu Verifikasi</span></td>
+                        <td>
+                            <button class="btn-small view-btn">Lihat</button>
+                            <button class="btn-small edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Siti Aminah</td>
+                        <td>10/04/2024</td>
+                        <td><span class="status-approved">Diterima</span></td>
+                        <td>
+                            <button class="btn-small view-btn">Lihat</button>
+                            <button class="btn-small edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Muhammad Ali</td>
+                        <td>05/04/2024</td>
+                        <td><span class="status-rejected">Ditolak</span></td>
+                        <td>
+                            <button class="btn-small view-btn">Lihat</button>
+                            <button class="btn-small edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="pagination">
+                <button class="btn-small">Sebelumnya</button>
+                <span>Halaman 1 dari 3</span>
+                <button class="btn-small">Selanjutnya</button>
+            </div>
+        </section>
+        
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Detail Pendaftaran</h3>
+                <div class="modal-body" id="modalDetailContent">
+                </div>
+                <div class="modal-actions">
+                    <button class="btn" id="approveBtn">Terima</button>
+                    <button class="btn" id="rejectBtn">Tolak</button>
+                    <button class="btn" id="requestRevisionBtn">Minta Revisi</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TK AISYIYAH 6 TASIKMALAYA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK AISYIYAH 6 TASIKMALAYA - Registrasi Akun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TK AISYIYAH 6 TASIKMALAYA</h1>
+            <p>Pendaftaran Siswa Baru</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="registrasi.html">Pendaftaran</a></li>
+                <li><a href="tentang.html">Tentang Sekolah</a></li>
+                <li><a href="kegiatan.html">Kegiatan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="admin.html" class="admin-link">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="registration-form">
+            <h2>Registrasi Akun</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telepon</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <button type="submit" class="btn">Daftar</button>
+            </form>
+            
+            <p class="login-link">Sudah punya akun? <a href="#login">Login disini</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TK AISYIYAH 6 TASIKMALAYA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

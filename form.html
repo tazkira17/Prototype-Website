@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK AISYIYAH 6 TASIKMALAYA - Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TK AISYIYAH 6 TASIKMALAYA</h1>
+            <p>Formulir Pendaftaran Siswa Baru</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="registrasi.html">Pendaftaran</a></li>
+                <li><a href="form.html" class="active">Formulir</a></li>
+                <li><a href="status.html">Status Pendaftaran</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="registration-form">
+            <h2>Formulir Pendaftaran Siswa Baru</h2>
+            <form id="studentForm">
+                <h3>Data Calon Siswa</h3>
+                <div class="form-group">
+                    <label for="studentName">Nama Lengkap Siswa</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthPlace">Tempat Lahir</label>
+                    <input type="text" id="birthPlace" name="birthPlace" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthDate">Tanggal Lahir</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Jenis Kelamin</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Pilih Jenis Kelamin</option>
+                        <option value="L">Laki-laki</option>
+                        <option value="P">Perempuan</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Alamat</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                
+                <h3>Data Orang Tua/Wali</h3>
+                <div class="form-group">
+                    <label for="fatherName">Nama Ayah</label>
+                    <input type="text" id="fatherName" name="fatherName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motherName">Nama Ibu</label>
+                    <input type="text" id="motherName" name="motherName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="parentPhone">Telepon Orang Tua</label>
+                    <input type="tel" id="parentPhone" name="parentPhone" required>
+                </div>
+                
+                <h3>Berkas Persyaratan</h3>
+                <div class="form-group">
+                    <label for="photo">Pas Foto 3x4</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthCertificate">Akta Kelahiran</label>
+                    <input type="file" id="birthCertificate" name="birthCertificate" accept=".pdf,.jpg,.png" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="familyCard">Kartu Keluarga</label>
+                    <input type="file" id="familyCard" name="familyCard" accept=".pdf,.jpg,.png" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="paymentProof">Bukti Pembayaran</label>
+                    <input type="file" id="paymentProof" name="paymentProof" accept=".pdf,.jpg,.png" required>
+                </div>
+                
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Saya menyatakan bahwa data yang saya isi adalah benar dan dapat dipertanggungjawabkan</label>
+                </div>
+                
+                <button type="submit" class="btn">Kirim Formulir</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TK AISYIYAH 6 TASIKMALAYA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

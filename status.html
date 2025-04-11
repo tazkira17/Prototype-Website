@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK AISYIYAH 6 TASIKMALAYA - Status Pendaftaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TK AISYIYAH 6 TASIKMALAYA</h1>
+            <p>Status Pendaftaran Siswa Baru</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="registrasi.html">Pendaftaran</a></li>
+                <li><a href="tentang.html">Tentang Sekolah</a></li>
+                <li><a href="kegiatan.html">Kegiatan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="admin.html" class="admin-link">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="status-section">
+            <div class="status-header">
+                <h2>Status Pendaftaran</h2>
+                <p class="last-update">Terakhir diperbarui: <span id="updateDate">10 Mei 2024, 14:30 WIB</span></p>
+            </div>
+
+            <div class="status-card">
+                <div class="status-info">
+                    <div class="student-photo">
+                        <img src="https://via.placeholder.com/150" alt="Foto Siswa" id="studentPhoto">
+                    </div>
+                    <div class="student-details">
+                        <h3 id="studentName">Ahmad Fauzi</h3>
+                        <p><strong>No. Pendaftaran:</strong> <span id="registrationNumber">TAQ-2024-0123</span></p>
+                        <p><strong>Tanggal Pendaftaran:</strong> <span id="registrationDate">5 Mei 2024</span></p>
+                        <p><strong>Kelas yang Dituju:</strong> <span id="targetClass">Kelompok A (Usia 4-5 tahun)</span></p>
+                    </div>
+                </div>
+
+                <div class="status-progress">
+                    <div class="progress-bar">
+                        <div class="progress-step completed">
+                            <div class="step-icon">✓</div>
+                            <p class="step-label">Formulir Terisi</p>
+                            <p class="step-date">5 Mei 2024</p>
+                        </div>
+                        <div class="progress-step completed">
+                            <div class="step-icon">✓</div>
+                            <p class="step-label">Berkas Diterima</p>
+                            <p class="step-date">6 Mei 2024</p>
+                        </div>
+                        <div class="progress-step active">
+                            <div class="step-icon">3</div>
+                            <p class="step-label">Proses Verifikasi</p>
+                            <p class="step-date">Sedang berlangsung</p>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-icon">4</div>
+                            <p class="step-label">Hasil Seleksi</p>
+                            <p class="step-date">Menunggu</p>
+                        </div>
+                    </div>
+
+                    <div class="current-status">
+                        <h4>Status Saat Ini:</h4>
+                        <div class="status-badge processing">
+                            <span id="statusText">Sedang Diproses</span>
+                        </div>
+                        <p class="status-description" id="statusDescription">
+                            Pendaftaran Anda sedang dalam proses verifikasi oleh pihak sekolah. 
+                            Hasil seleksi akan diumumkan paling lambat 7 hari kerja setelah pendaftaran.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="document-section">
+                    <h3>Dokumen Pendaftaran</h3>
+                    <table class="document-table">
+                        <thead>
+                            <tr>
+                                <th>Dokumen</th>
+                                <th>Status</th>
+                                <th>Catatan</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Formulir Pendaftaran</td>
+                                <td><span class="doc-status verified">Terverifikasi</span></td>
+                                <td>-</td>
+                                <td><button class="btn-small view-btn">Lihat</button></td>
+                            </tr>
+                            <tr>
+                                <td>Pas Foto 3x4</td>
+                                <td><span class="doc-status verified">Terverifikasi</span></td>
+                                <td>-</td>
+                                <td><button class="btn-small view-btn">Lihat</button></td>
+                            </tr>
+                            <tr>
+                                <td>Akta Kelahiran</td>
+                                <td><span class="doc-status verified">Terverifikasi</span></td>
+                                <td>-</td>
+                                <td><button class="btn-small view-btn">Lihat</button></td>
+                            </tr>
+                            <tr>
+                                <td>Kartu Keluarga</td>
+                                <td><span class="doc-status verified">Terverifikasi</span></td>
+                                <td>-</td>
+                                <td><button class="btn-small view-btn">Lihat</button></td>
+                            </tr>
+                            <tr>
+                                <td>Bukti Pembayaran</td>
+                                <td><span class="doc-status pending">Menunggu Verifikasi</span></td>
+                                <td>Sedang diproses</td>
+                                <td><button class="btn-small view-btn">Lihat</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn" id="printProof">Cetak Bukti Pendaftaran</button>
+                    <button class="btn" id="contactAdmin">Hubungi Admin</button>
+                    <button class="btn" id="updateData">Perbarui Data</button>
+                </div>
+
+                <div class="notification-box">
+                    <h4>Pemberitahuan:</h4>
+                    <div class="notification-content">
+                        <p id="notificationText">
+                            Harap periksa status pendaftaran secara berkala. Jika ada dokumen yang perlu direvisi, 
+                            Anda akan menerima notifikasi melalui email dan SMS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TK AISYIYAH 6 TASIKMALAYA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal untuk melihat dokumen -->
+    <div id="documentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalDocTitle">Formulir Pendaftaran</h3>
+            <div class="modal-body">
+                <div class="document-viewer">
+                    <iframe id="documentFrame" src="#" frameborder="0"></iframe>
+                </div>
+                <div class="document-actions">
+                    <button class="btn" id="downloadDoc">Unduh Dokumen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

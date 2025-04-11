@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK AISYIYAH 6 TASIKMALAYA - Kegiatan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TK AISYIYAH 6 TASIKMALAYA</h1>
+            <p>Kegiatan Sekolah</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="registrasi.html">Pendaftaran</a></li>
+                <li><a href="tentang.html">Tentang Sekolah</a></li>
+                <li><a href="kegiatan.html">Kegiatan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="admin.html" class="admin-link">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="activities-section">
+            <h2>Kegiatan Rutin Harian</h2>
+            <div class="daily-activities">
+                <div class="schedule-card">
+                    <h3>Jadwal Harian</h3>
+                    <table class="schedule-table">
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Kegiatan</th>
+                        </tr>
+                        <tr>
+                            <td>07.00 - 07.30</td>
+                            <td>Penyambutan siswa</td>
+                        </tr>
+                        <tr>
+                            <td>07.30 - 08.00</td>
+                            <td>Pembukaan & doa pagi</td>
+                        </tr>
+                        <tr>
+                            <td>08.00 - 09.00</td>
+                            <td>Pembelajaran inti 1</td>
+                        </tr>
+                        <tr>
+                            <td>09.00 - 09.30</td>
+                            <td>Istirahat & snack time</td>
+                        </tr>
+                        <tr>
+                            <td>09.30 - 10.30</td>
+                            <td>Pembelajaran inti 2</td>
+                        </tr>
+                        <tr>
+                            <td>10.30 - 11.00</td>
+                            <td>Kegiatan keagamaan</td>
+                        </tr>
+                        <tr>
+                            <td>11.00 - 11.30</td>
+                            <td>Penutupan & persiapan pulang</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="activity-highlights">
+                    <h3>Highlight Kegiatan</h3>
+                    <div class="highlight-item">
+                        <img src="https://via.placeholder.com/150" alt="Pembelajaran">
+                        <p>Pembelajaran interaktif dengan metode yang menyenangkan</p>
+                    </div>
+                    <div class="highlight-item">
+                        <img src="https://via.placeholder.com/150" alt="Shalat">
+                        <p>Pembiasaan shalat berjamaah dan doa sehari-hari</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-activities">
+            <h2>Kegiatan Khusus</h2>
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Manasik Haji">
+                    <div class="activity-content">
+                        <h3>Manasik Haji</h3>
+                        <p class="activity-date">15 Oktober 2024</p>
+                        <p>Kegiatan simulasi ibadah haji untuk mengenalkan rukun Islam ke-5 kepada anak-anak</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Peringatan Hari Besar Islam">
+                    <div class="activity-content">
+                        <h3>Peringatan Hari Besar Islam</h3>
+                        <p class="activity-date">Bulan Maulid & Isra' Mi'raj</p>
+                        <p>Berbagai lomba dan pentas seni dalam rangka memperingati hari besar Islam</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Field Trip">
+                    <div class="activity-content">
+                        <h3>Field Trip Edukatif</h3>
+                        <p class="activity-date">2x dalam setahun</p>
+                        <p>Kunjungan ke tempat-tempat edukasi seperti kebun binatang, museum, atau tempat bersejarah</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Pentas Seni">
+                    <div class="activity-content">
+                        <h3>Pentas Seni Akhir Tahun</h3>
+                        <p class="activity-date">Juni 2024</p>
+                        <p>Pagelaran bakat dan kreativitas siswa sebagai bentuk apresiasi perkembangan anak</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="activity-calendar">
+            <h2>Kalender Kegiatan</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth">&lt;</button>
+                    <h3 id="currentMonth">April 2024</h3>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be generated by JavaScript -->
+                </div>
+            </div>
+            <div class="calendar-events" id="calendarEvents">
+                <h3>Kegiatan Bulan Ini</h3>
+                <ul id="eventsList">
+                    <!-- Events will be populated by JavaScript -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TK AISYIYAH 6 TASIKMALAYA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
